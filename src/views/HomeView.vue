@@ -23,7 +23,7 @@ getPerfumes();
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-3" v-for="item in perfumes">
+        <div class="col-6 col-sm-3" v-for="item in perfumes">
           <div class="h-100 d-flex flex-column">
             <img :src="item.image" alt="香水圖片" class="perfume-img">
             <h3 class="">
@@ -45,6 +45,6 @@ getPerfumes();
 <style scoped>
 .perfume-img {
   max-width: 255px;
-  height: 255px;
+  aspect-ratio: 1/1;
 }
 </style>
