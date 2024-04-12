@@ -23,16 +23,16 @@ getPerfumes();
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-6 col-sm-3" v-for="item in perfumes">
+        <div class="col-6 col-sm-3" v-for="item in perfumes" :key="item">
           <div class="h-100 d-flex flex-column">
             <img :src="item.image" alt="香水圖片" class="perfume-img">
-            <h3 class="">
+            <h3 class="title">
               {{ item.title }}
             </h3>
-            <p>{{ item.category }}</p>
+            <p class="subtitle">{{ item.category }}</p>
             <div class="">
-              <span>{{ item.originPrice }}</span>
-              <span>{{ item.price }}</span>
+              <span class="price">NT${{ item.originPrice }}</span>
+              <span class="origin-price ms-2">NT${{ item.price }}</span>
             </div>
           </div>
         </div>
@@ -46,5 +46,20 @@ getPerfumes();
 .perfume-img {
   max-width: 255px;
   aspect-ratio: 1/1;
+}
+.title {
+  font: normal normal 600 24px/36px SF Pro Text;
+}
+.subtitle {
+  font: normal normal 300 16px/24px SF Pro Text;
+}
+.price {
+  font: normal normal 300 16px/24px SF Pro Text;
+}
+.origin-price {
+  text-decoration: line-through;
+  font: normal normal 300 16px/24px SF Pro Text;
+  letter-spacing: 0px;
+  color: #8D8D8D;
 }
 </style>
