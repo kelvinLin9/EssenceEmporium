@@ -36,7 +36,7 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #0d6efd !default;
+$blue:    #916019 !default; //*custom
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
@@ -413,8 +413,22 @@ $spacers: (
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+//-----------------------
+  4: $spacer * .25,
+  8: $spacer * .5,
+  10: $spacer * .625,
+  12: $spacer * .75,
+  16: $spacer,
+  20: $spacer * 1.25,
+  24: $spacer * 1.5,
+  32: $spacer * 2,
+  40: $spacer * 2.5,
+  44: $spacer * 2.75,
+  48: $spacer * 3,
+  54: $spacer * 3.5,
+  60: $spacer * 3.75,
+  64: $spacer * 4,
+  80: $spacer * 5,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -636,16 +650,30 @@ $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+// *custom
+$h7-font-size:                $font-size-base * 0.875 !default;
+$h8-font-size:                $font-size-base * 0.75 !default;
+$h9-font-size:                $font-size-base * 0.5 !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  1: $h1-font-size, //40
+  2: $h2-font-size, //32
+  3: $h3-font-size, //28
+  4: $h4-font-size, //24
+  5: $h5-font-size, //20
+  6: $h6-font-size, //16
+  // *custom
+  7: $h7-font-size, //14
+  8: $h8-font-size, //12
+  9: $h9-font-size, //8
+  20: 20px,
+  24: 24px,
+  28: 28px,
+  30: 30px,
+  36: 36px,
+  48: 48px,
 ) !default;
 // scss-docs-end font-sizes
 
