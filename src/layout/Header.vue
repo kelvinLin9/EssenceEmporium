@@ -28,7 +28,7 @@
             </li>
             <li class="nav-item d-flex align-items-center">
               <i class="bi bi-heart-fill"></i>
-              <a class="nav-link" href="/EssenceEmporium/admin">Admin</a>
+              <a class="nav-link" href="/perfume_ui/admin">Admin</a>
             </li>
           </ul>
         </div>
