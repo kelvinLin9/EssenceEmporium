@@ -68,14 +68,15 @@ const perfumeData = ref({
   category: '',
   price: 0,
   unit: '',
-  image: ''
+  image: '',
+  isEnabled: false,
 });
 const emits = defineEmits(['update']);
 const createPerfume = async () => {
   try {
     const res = await axios.post('https://perfume-express.onrender.com/perfumes', perfumeData.value);
     console.log(res.data);
-    perfumeData.value = { title: '', category: '', price: 0, unit: '', image: '' };
+    perfumeData.value = { title: '', category: '', price: 0, unit: '', image: '', isEnabled: false};
     emits('update')
   } catch (err) {
     console.log('Failed to create perfume:', err);
