@@ -1,10 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import Header from '@/layout/Header.vue'
 import Footer from '@/layout/Footer.vue'
 import axios from 'axios';
 
 const perfumes = ref([])
+const selectedCategory = ref("")
 const getPerfumes = async () => {
   try {
     const res = await axios.get('https://perfume-express.onrender.com/perfumes');
@@ -15,6 +16,10 @@ const getPerfumes = async () => {
   }
 }
 
+const filterData = computed(() => {
+  return perfumes.value.filter(item => item.category.match(selectedCategory.value) && item.isEnabled === true);
+})
+
 getPerfumes();
 </script>
 
@@ -23,24 +28,21 @@ getPerfumes();
 
   <div class="container-fluid bg-primary mb-80">
     <ul class="nav container">
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">CHANEL</a>
+      <li class="nav-item" @click="selectedCategory = ''">
+        <a class="nav-link text-white" href="#">全部商品</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Jo Malone</a>
+      <li class="nav-item" @click="selectedCategory = '清新海洋'">
+        <a class="nav-link text-white" href="#">清新海洋</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Curology</a>
+      <li class="nav-item" @click="selectedCategory = '木質'">
+        <a class="nav-link text-white" href="#">木質</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Dior</a>
+      <li class="nav-item" @click="selectedCategory = '花香調'">
+        <a class="nav-link text-white" href="#">花香調</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Chloe </a>
+      <li class="nav-item" @click="selectedCategory = '果香調'">
+        <a class="nav-link text-white" href="#">果香調</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">ZARA</a>
-      </li> 
     </ul>
   </div>
 
@@ -48,7 +50,7 @@ getPerfumes();
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-6 col-sm-3 mb-60" v-for="item in perfumes" :key="item">
+        <div class="col-6 col-sm-3 mb-60" v-for="item in filterData" :key="item">
           <div class="h-100 d-flex flex-column">
             <img :src="item.image" alt="香水圖片" class="perfume-img">
             <h3 class="title mb-0">

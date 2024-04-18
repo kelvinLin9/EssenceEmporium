@@ -28,6 +28,10 @@
               <label for="image" class="form-label">圖片連結</label>
               <input type="url" class="form-control" id="image" v-model="perfumeData.image" required>
             </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="isEnabled" v-model="perfumeData.isEnabled">
+              <label for="isEnabled" class="form-check-label">啟用</label>
+            </div>
             <button 
               type="submit" 
               class="btn btn-primary" 

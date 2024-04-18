@@ -26,10 +26,10 @@
               <i class="bi bi-cart-fill"></i>
               <a class="nav-link" href="#">Cart(3)</a>
             </li>
-            <li class="nav-item d-flex align-items-center">
-              <i class="bi bi-heart-fill"></i>
-              <a class="nav-link" href="/perfume_ui/admin">Admin</a>
-            </li>
+            <RouterLink class="nav-item d-flex align-items-center" to="/admin">
+              <i class="bi bi-tools"></i>
+              <a class="nav-link">Admin</a>
+            </RouterLink>
           </ul>
         </div>
       </div>

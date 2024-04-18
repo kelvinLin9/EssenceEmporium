@@ -1,3 +1,3 @@
 # 香水電商
 
-此為 node.js 2024入門班單人專題門票
+[Demo](https://kelvinlin9.github.io/perfume_ui/)

@@ -18,6 +18,7 @@
           <th scope="col">類別</th>
           <th scope="col">價格</th>
           <th scope="col">容量</th>
+          <th scope="col">啟用</th>
           <th scope="col">操作</th>
         </tr>
       </thead>
@@ -29,6 +30,7 @@
           <td>{{ product.category }}</td>
           <td>${{ product.price }}</td>
           <td>{{ product.unit }}</td>
+          <td>{{ product.isEnabled }}</td>
           <td>
             <button 
               class="btn btn-primary btn-sm me-8" 
