@@ -2,7 +2,7 @@
   <footer class="container-fluid bg-primary py-20">
     <div class="container">
       <div class="row justify-content-between">
-        <div class="col">
+        <div class="col-12 col-md-6">
           <div class="d-flex align-items-center text-white">
             <h1>
               <RouterLink to="/" class="logo navbar-brand nav-link d-flex">
@@ -10,16 +10,19 @@
               </RouterLink>
             </h1>
             <p class="ms-md-4 ps-20">© 2020. All Rights Reserved.</p>
-            <div class="ms-auto">
-              <ul class="mb-2 mb-lg-0 d-flex align-items-center menu text-white">
-                <li class="c_ml_36 fs-5">
-                  <a href="#" class="text-white">Product</a></li>
-                <li class="c_ml_36 fs-5">
-                  <a href="#" class="text-white">Blog</a></li>
-                <li class="c_ml_36 fs-5">
-                  <a href="#" class="text-white">Contact</a></li>
-              </ul>
-            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <ul class="mb-2 mb-lg-0  d-flex align-items-center menu text-white">
+            <li class="fs-5 ms-auto">
+              <a href="#" class="text-white">Product</a></li>
+            <li class="fs-5">
+              <a href="#" class="text-white">Blog</a></li>
+            <li class="fs-5">
+              <a href="#" class="text-white">Contact</a></li>
+          </ul>
+          <div class="">
           </div>
         </div>
       </div>

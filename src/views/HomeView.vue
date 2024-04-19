@@ -76,9 +76,9 @@ getPerfumes();
         <div class="row">
             <div class="col-md-4">
                 <h3 class="fs-1 fw-bold c_gray mb-4">記得<br>訂閱以獲取更多資訊！</h3>
-                <div class="subscription_Input d-flex">
-                    <input class="email_input" type="text" placeholder="Your email address">
-                    <a class="subscription_btn text-white w-100 d-flex justify-content-center align-items-center" href="javascript:;">Subscribe</a>
+                <div class="subscription-input d-flex">
+                    <input class="email-input" type="text" placeholder="Your email address">
+                    <a class="subscription-btn text-white w-100 d-flex justify-content-center align-items-center" href="javascript:;">Subscribe</a>
                 </div>
             </div>
         </div>
@@ -118,17 +118,17 @@ getPerfumes();
 	padding: 312px 0px 112px 0px;
 }
 
-.subscription_Input{
+.subscription-input{
 	border: 2px solid #916000;
 	border-radius: 4px;
 	@media (min-width:540px) {
-		width: 345px;
+		width: 300px;
 	}
-	.email_input{
-		padding: 18px 16px;
+	.email-input{
+		padding: 12px 4px;
 	}
 
-	.subscription_btn{
+	.subscription-btn{
 		background-color: #916000;
 		color: #fff;
 		transition: background-color 0.3s ease ;

@@ -1,11 +1,3 @@
-
-當然，這裡提供了完整的CreatePerfumeModal.vue組件，所有文本和屬性均使用繁體中文，以符合您的需求。
-
-CreatePerfumeModal.vue 更新
-這個版本的CreatePerfumeModal組件包括了所有必要的欄位：category (分類), image (圖片連結), isEnabled (是否啟用), originPrice (原價), price (售價), title (名稱), 和 unit (單位)。
-
-vue
-Copy code
 <template>
   <div class="modal fade" id="createPerfumeModal" tabindex="-1" aria-labelledby="createPerfumeModalLabel" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog">
