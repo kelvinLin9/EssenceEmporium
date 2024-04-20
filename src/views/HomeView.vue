@@ -6,13 +6,17 @@ import axios from 'axios';
 
 const perfumes = ref([])
 const selectedCategory = ref("")
+const loading = ref(false)
 const getPerfumes = async () => {
+  loading.value = true
   try {
     const res = await axios.get('https://perfume-express.onrender.com/perfumes');
     perfumes.value = res.data;
     console.log(res.data);
   } catch (error) {
     console.error(error);
+  } finally {
+    loading.value = false
   }
 }
 
@@ -26,7 +30,7 @@ getPerfumes();
 <template>
   <Header></Header>
 
-  <div class="container-fluid bg-primary mb-80">
+  <div class="container-fluid bg-primary">
     <ul class="nav container">
       <li class="nav-item" @click="selectedCategory = ''">
         <a class="nav-link text-white" href="#">全部商品</a>
@@ -46,8 +50,11 @@ getPerfumes();
     </ul>
   </div>
 
+  <div v-if="loading">
+    <img src="../assets/images/loading.gif" alt="">
+  </div>
 
-  <div>
+  <div v-if="!loading" class="mt-80">
     <div class="container">
       <div class="row">
         <div class="col-6 col-sm-3 mb-60" v-for="item in filterData" :key="item">
